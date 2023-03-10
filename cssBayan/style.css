@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./assets/bg/frogs-in-pond.jpg");
+    background-size: 350px;
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion {
+    width: 85%;
+    height: 90%;
+    background-color: #9EC264;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 8px;
+}
+
+input {
+    display: none;
+}
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 40px;
+    max-width: 280px;
+    text-align: center;
+    padding-bottom: 18px;
+}
+
+.meme-item {
+    align-self: stretch;
+    padding-bottom: 10px;
+}
+
+.meme-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 25px;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    border-top: 1px solid #96b860;
+}
+
+.meme-title img {
+    filter: grayscale(100%);
+    width: 25px;
+    opacity: 0;
+}
+
+.meme-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0px;
+    overflow: hidden;
+    transition: height .3s ease-in;
+}
+
+.meme-content img {
+    max-width: 32vh;
+    border-radius: 15px;
+}
+
+input:checked + label .meme-content {
+    height: 32vh;
+}
+
+input:checked + label .meme-title img {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+
+
+
+
