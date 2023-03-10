@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 .wrapper {
     width: 100%;
     height: 100vh;
@@ -19,7 +23,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 8px;
+    padding: 10px 8px;  
 }
 
 input {
@@ -39,10 +43,10 @@ h1 {
     align-self: stretch;
 }
 
-.meme-item:hover,
+/* .meme-item:hover,
 .accordion *:hover {
     cursor: pointer;
-}
+} */
 
 .meme-title {
     display: flex;
@@ -53,6 +57,7 @@ h1 {
     font-size: 25px;
     line-height: 130%;
     border-top: 1px solid #96b860;
+    padding: 0px 5px;
 }
 
 .meme-title img {
@@ -84,6 +89,30 @@ input:checked + label .meme-title img {
     filter: grayscale(0%);
 }
 
+@media (min-width: 767px) {
+    .accordion {
+        padding: 10px 15px;
+    }
+    h1 {
+        font-size: 45px;
+        max-width: 350px;
+    }
+    .meme-title {
+        font-size: 30px;
+    }
+    .meme-title img {
+        width: 30px;
+    }
+    .meme-content img {
+        max-width: 37vh;
+        border-radius: 15px;
+    }
+    
+    input:checked + label .meme-content {
+        height: 37vh;
+    }
+}
+ 
 
 
 
