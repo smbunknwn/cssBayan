@@ -37,7 +37,11 @@ h1 {
 
 .meme-item {
     align-self: stretch;
-    padding-bottom: 10px;
+}
+
+.meme-item:hover,
+.accordion *:hover {
+    cursor: pointer;
 }
 
 .meme-title {
@@ -47,8 +51,7 @@ h1 {
     font-family: 'Amatic SC', cursive;
     font-weight: 700;
     font-size: 25px;
-    padding-top: 3px;
-    padding-bottom: 5px;
+    line-height: 130%;
     border-top: 1px solid #96b860;
 }
 
