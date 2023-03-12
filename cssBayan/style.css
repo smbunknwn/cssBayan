@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./assets/bg/frogs-in-pond.jpg");
+    background-size: 350px;
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion {
+    width: 85%;
+    height: 90%;
+    background-color: #9EC264;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 8px;  
+}
+
+
+input {
+    display: none;
+}
+
+label {
+    transform: opacity .6s;
+}
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 40px;
+    max-width: 280px;
+    text-align: center;
+    padding-bottom: 18px;
+}
+
+.meme-item {
+    align-self: stretch;
+}
+
+
+
+.meme-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 130%;
+    border-top: 1px solid #96b860;
+    padding: 0px 5px;
+}
+
+.meme-title img {
+    filter: grayscale(100%);
+    width: 25px;
+    opacity: 0;
+}
+
+.meme-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0px;
+    overflow: hidden;
+    transition: height .4s ease-in-out;
+}
+
+.meme-content img {
+    max-width: 32vh;
+    border-radius: 15px;
+    scale: 0.5;
+    transition: scale .7s;
+}
+
+input:checked + label .meme-content {
+    height: 32vh;
+}
+
+input:checked + label .meme-content img {
+    scale: 1;
+}
+
+input:checked + label .meme-title img {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+@media (min-width: 767px) {
+    .accordion {
+        padding: 10px 15px;
+    }
+    h1 {
+        font-size: 45px;
+        max-width: 350px;
+    }
+    .meme-title {
+        font-size: 30px;
+    }
+    .meme-title img {
+        width: 30px;
+    }
+    .meme-content img {
+        max-height: 37vh;
+    }
+    
+    input:checked + label .meme-content {
+        height: 37vh;
+    }
+}
+ 
+@media (min-width: 1024px) {
+    .meme-item *:hover{
+        cursor: pointer;
+    }
+
+    .accordion:hover {
+        cursor: pointer;
+    }
+
+    .accordion {
+        max-width: 55%;
+        height: 97%;
+        padding-right: 17px;
+        overflow: hidden;
+    }
+
+    .meme-title img {
+        visibility: hidden;
+        transition: .4s;
+    }
+
+    
+
+    .meme-title:hover + .meme-content,
+    .meme-content:hover {
+        height: 30vh;
+    }
+
+    .meme-title:hover + .meme-content img,
+    .meme-content:hover img {
+        scale: 1;
+    }
+
+    
+
+
+    input:checked + label .meme-title img {
+        opacity: 1;
+        filter: grayscale(0%);
+    }
+
+    .accordion:hover .meme-title img {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    h1 {
+        font-size: 50px;
+        max-width: 100%;
+        padding-bottom: 8px;
+        cursor: default;
+    }
+
+    .meme-content img {
+        max-height: 30vh;
+    }
+    
+    input:checked + label .meme-content {
+        height: 30vh;
+    }
+
+    input:active + label{
+        opacity: .7;
+    }
+
+}
+ 
+
+
+
+
