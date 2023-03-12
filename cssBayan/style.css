@@ -76,10 +76,16 @@ h1 {
 .meme-content img {
     max-width: 32vh;
     border-radius: 15px;
+    scale: 0.5;
+    transition: scale .7s;
 }
 
 input:checked + label .meme-content {
     height: 32vh;
+}
+
+input:checked + label .meme-content img {
+    scale: 1;
 }
 
 input:checked + label .meme-title img {
@@ -131,10 +137,20 @@ input:checked + label .meme-title img {
         transition: .4s;
     }
 
+    
+
     .meme-title:hover + .meme-content,
     .meme-content:hover {
         height: 30vh;
     }
+
+    .meme-title:hover + .meme-content img,
+    .meme-content:hover img {
+        scale: 1;
+    }
+
+    
+
 
     input:checked + label .meme-title img {
         opacity: 1;
@@ -160,6 +176,8 @@ input:checked + label .meme-title img {
     input:checked + label .meme-content {
         height: 30vh;
     }
+
+    
 }
  
 
