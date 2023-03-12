@@ -182,7 +182,7 @@ input:checked + label .meme-title img {
     }
 
     input:active + label{
-        opacity: .6;
+        opacity: .7;
     }
 
 }
