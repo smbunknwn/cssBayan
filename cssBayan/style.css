@@ -31,6 +31,10 @@ input {
     display: none;
 }
 
+label {
+    transform: opacity .6s;
+}
+
 h1 {
     font-family: 'Amatic SC', cursive;
     font-weight: 700;
@@ -177,7 +181,10 @@ input:checked + label .meme-title img {
         height: 30vh;
     }
 
-    
+    input:active + label{
+        opacity: .6;
+    }
+
 }
  
 
